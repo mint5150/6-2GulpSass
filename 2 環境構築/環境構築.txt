@@ -1,0 +1,82 @@
+Mac、Windowsのどちらで環境構築をしたのか記載しておいてください。
+→Windowsで環境構築しました
+
+
+Node.jsとは
+・JavaScriptを、サーバー側で動作させるプラットフォーム（開発環境）
+
+参考サイト
+https://www.kagoya.jp/howto/it-glossary/develop/nodejs/
+https://www.softbanktech.co.jp/corp/hr/recruit/articles/64/
+
+
+Node.jsをインストールするバージョンで気を付けるポイント
+・LTS （偶数バージョン）最新版 （奇数バージョン）の2種類がある
+・偶数バージョンが安定版だが最新のものを入れるとパッケージ側で
+対応していないこともあるので、安定版の推奨バージョンをインストールする
+
+参考サイト
+https://johobase.com/node-js-install-setup/
+
+
+Node Package Managerとは
+・npmとも呼ばれる
+・Node.jsのパッケージを管理するツール
+・依存関係や競合関係を手動で管理するのは不可能なのでnpmが必要
+
+参考サイト
+https://zenn.dev/ryuu/articles/what-npm-means
+https://magazine.techacademy.jp/magazine/16105
+https://zenn.dev/antez/articles/a9d9d12178b7b2
+
+
+nodebrewとは(Mac使用者のみ)
+-
+
+
+package.jsonとは
+・Node.jsにおいてインストールするパッケージが記述されたファイル
+・環境が変わってもコマンド一発で元々あったパッケージをインストールすることが可能になる
+・案件に入って作業を行う前にどんなスクリプトがあるのか、どんなパッケージがあるのかなどはここを見て確認する
+
+参考サイト
+https://qiita.com/mzmz__02/items/dfa7abb4237a3842a2a8
+https://kosuke-space.com/package-json-npm#:~:text=package.json%E3%81%A8%E3%81%AF%E3%80%81Node,%E8%A8%98%E8%BF%B0%E3%81%95%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%81%99%E3%80%82&text=%E7%92%B0%E5%A2%83%E3%81%8C%E5%A4%89%E3%82%8F%E3%81%A3%E3%81%A6%E3%82%82,%E7%99%BB%E9%8C%B2%E3%81%99%E3%82%8B%E5%BF%85%E8%A6%81%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82
+
+
+package-lock.jsonとは
+・npm installによって実際にインストールしたパッケージのバージョンが記載されているファイル
+・dependency のバージョンを lock(固定)するためのファイル
+・npm installの実行時に自動的に作成される
+・インストール時、このファイルに記載されているバージョンにしたがってインストールされるのでバージョンの統一性が生まれる
+・また、1度削除したパッケージでもここに記載されていればインストールした時に以前と同じバージョンをインストールできる
+
+参考サイト
+https://qiita.com/sugurutakahashi12345/items/1f6bb7a372b8263500e5
+https://qiita.com/righteous/items/e5448cb2e7e11ab7d477
+https://note.com/shohey_tech/n/n103120f6295e
+https://yu-teck.com/programming/node-js/package-lock-json/
+
+
+npm install パッケージ名を実行する際気にしなければならないことが3つあります。
+公式ドキュメントで実際にパッケージ名を調べて確認するなどして上げてください。
+・グローバルインストールをしてしまうと使用しているPC全体に影響が出てしまうので注意する
+・package-lock.json が存在しても npm install はそれを上書きする場合があるので注意する
+・最新バージョンを検証せずにインストールするとバグや攻撃に利用される可能性もあるので注意する
+
+参考サイト
+https://docs.npmjs.com/
+https://qiita.com/sugurutakahashi12345/items/3cc49926faeaf25d3051
+https://blog.minimalcorp.com/users/jigen/posts/6f325dc9b8a00370b6aedf47a34cb3ce
+https://jfrog.com/ja/blog/mind-your-dependencies-defending-against-malicious-npm-packages/
+https://jfrog.com/ja/blog/mind-your-dependencies-defending-against-malicious-npm-packages/
+
+
+今回作業してできたファイルの中で1つGit管理の不要なものがあります。
+それは何か、なぜそれが不要なのか理由も書いてください。
+・node_modulesディレクトリは容量も膨大で、package.jsonとpackage-lock.jsonがあれば再現されるのでGit管理は不要
+
+参考サイト
+https://www.kagoya.jp/howto/it-glossary/develop/nodejs/
+https://www.softbanktech.co.jp/corp/hr/recruit/articles/64/
+https://engineering.mobalab.net/2019/08/08/package-json%E3%81%A8package-lock-json%E3%81%AE%E9%81%8B%E7%94%A8%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/ 
