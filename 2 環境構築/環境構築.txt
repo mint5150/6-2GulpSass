@@ -60,16 +60,13 @@ https://yu-teck.com/programming/node-js/package-lock-json/
 
 npm install パッケージ名を実行する際気にしなければならないことが3つあります。
 公式ドキュメントで実際にパッケージ名を調べて確認するなどして上げてください。
-・グローバルインストールをしてしまうと使用しているPC全体に影響が出てしまうので注意する
-・package-lock.json が存在しても npm install はそれを上書きする場合があるので注意する
-・最新バージョンを検証せずにインストールするとバグや攻撃に利用される可能性もあるので注意する
+
+・パッケージがプロジェクトの依存関係や環境との互換性があるか確認する
+・パッケージが定期的にメンテナンスされているか確認する
+・ドキュメントやサポートが充実しているか確認する
 
 参考サイト
-https://docs.npmjs.com/
-https://qiita.com/sugurutakahashi12345/items/3cc49926faeaf25d3051
-https://blog.minimalcorp.com/users/jigen/posts/6f325dc9b8a00370b6aedf47a34cb3ce
-https://jfrog.com/ja/blog/mind-your-dependencies-defending-against-malicious-npm-packages/
-https://jfrog.com/ja/blog/mind-your-dependencies-defending-against-malicious-npm-packages/
+https://www.npmjs.com/package/gulp
 
 
 今回作業してできたファイルの中で1つGit管理の不要なものがあります。
